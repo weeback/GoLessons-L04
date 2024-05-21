@@ -5,7 +5,7 @@
 
     [lib/database/mongo.go](lib/database/mongo.go)
 
-```
+```struct: lib/database/mongo.go
 (T) MongoIndex
     (f) Keys
     (f) Unique: bool
@@ -18,13 +18,28 @@
 
     [source/db/mongo/db.go](source/db/mongo/db.go)
 
-```
+```struct: source/db/mongo/db.go
 (T) DB
     (f) <collection-01>
     (f) <collection-02>
     (f) <collection-03>
     
 (F) NewDB(uri, dbname string, timeout time.Duration) *DB
+```
+
+```text: cmd/v1/main.go
+package main
+
+import (
+	"time"
+	
+	"myapp/source/db/mongo"
+)
+
+func main() {
+  // Connect to MongoDB
+  db.NewDB("mongodb://localhost:27017", "mydb", 5*time.Second)
+}
 ```
 
 * Build Application

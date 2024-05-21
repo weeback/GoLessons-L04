@@ -10,6 +10,7 @@ import (
 )
 
 type DB struct {
+	UserDB
 }
 
 func New(uri, dbname string, timeout time.Duration) *DB {
@@ -79,5 +80,7 @@ func New(uri, dbname string, timeout time.Duration) *DB {
 		os.Exit(1)
 	}
 	// return the database instance
-	return &DB{}
+	return &DB{
+		UserDB: NewUserDB(db),
+	}
 }
