@@ -1,5 +1,3 @@
-package myapp
+package CoffeeStore
 
-// Version is the version of the application
-var Version string
-
+var Version string = "1.0.0"

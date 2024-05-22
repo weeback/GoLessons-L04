@@ -1,13 +1,13 @@
-// Package database
-// Description: MongoDB connection and collection initialization.
 package database
 
 import (
-	"context"
-	"time"
-
-	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
+	"time"
+)
+
+import (
+	"context"
+	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
